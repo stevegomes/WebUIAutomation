@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <!-- TODO get somebody who knows about CSPs to reconfigure this - it's probably far too lenient -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' gap:; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; media-src *; img-src 'self' * data:;">
+        <meta name="format-detection" content="telephone=no">
+        <title>Forrester TAP</title>
+
+        <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+        <link rel="stylesheet" href="lib/leaflet/dist/leaflet.css" />
+        <link rel="stylesheet" href="css/ftap.min.css">
+
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <script src="lib/ng-clamp-js/clamp.min.js"></script>
+        <script src="lib/ng-clamp-js/ngclamp.js"></script>
+        <script src="lib/ng-lodash/build/ng-lodash.min.js"></script>
+        <script src="lib/moment/min/moment.min.js"></script>
+        <script src="lib/angular-moment/angular-moment.min.js"></script>
+        <script src="lib/angular-ui-validate/dist/validate.js"></script>
+        <script src="lib/leaflet/dist/leaflet.js"></script>
+        <script src="lib/canvas-to-blob/js/canvas-to-blob.js"></script>
+        <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+        <script src="lib/Geolib/dist/geolib.js"></script>
+        <script src="lib/short-number/index.js"></script>
+        <script src="cordova.js"></script>
+
+        <!-- API Gateway resources -->
+        <script src="lib/cognito-sdk.js"></script>
+        <script src="lib/api-gateway-sdk.js"></script>
+        <script src="lib/aws-sdk-mobile-analytics.min.js"></script>
+
+        <script src="js/ftap.min.js"></script>
+    </head>
+
+    <body ng-app="ftap" class="platform-ios platform-cordova platform-webview">
+        <ion-nav-view></ion-nav-view>
+    </body>
+</html>

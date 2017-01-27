@@ -1,0 +1,59 @@
+<ion-modal-view class="ft-filter-modal" ng-controller="FilterModalController as filterCtrl">
+    <ion-content class="ft-filter-modal-content">
+        <div class="ft-filter-header">
+            Filters
+
+            <a href class="ft-filter-modal-close-button" ng-click="closeModal()">
+                <img src="app/img/icon-close.png" class="ft-icon-close">
+            </a>
+        </div>
+
+        <div class="ft-filter-section">
+            <div class="ft-filter-section-title">
+                Just Mobs
+            </div>
+
+            <div class="ft-filter-control">
+                <ft-toggle value="options.mobsOnly"></ft-toggle>
+            </div>
+        </div>
+
+        <div class="ft-filter-section">
+            <div class="ft-filter-section-title">
+                Just Friends
+            </div>
+
+            <div class="ft-filter-control">
+                <ft-toggle value="options.friendsOnly"></ft-toggle>
+            </div>
+        </div>
+
+        <div class="ft-filter-section ft-filter-rating-buttons">
+            <div ng-repeat="rating in filterCtrl.ratings"
+                class="ft-filter-rating-button ft-filter-rating-{{ rating }}"
+                ng-click="filterCtrl.toggleRating(rating)"
+                ng-class="{ 'ft-active': filterCtrl.isRatingActive(rating) }"></div>
+        </div>
+
+        <div class="ft-filter-section">
+            <div class="ft-filter-section-title">
+                Categories
+            </div>
+
+            <ul class="ft-filter-category-list">
+                <li class="ft-filter-category-list-item"
+                    ng-class="{ 'ft-active': filterCtrl.allActive }"
+                    ng-click="filterCtrl.toggleAll()">
+                    all
+                </li>
+
+                <li class="ft-filter-category-list-item"
+                    ng-repeat="category in nearbyCtrl.filterCategories"
+                    ng-class="{ 'ft-active': category.active }"
+                    ng-click="filterCtrl.toggle(category)">
+                    {{ category.label | underscoreToSpace }}
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-modal-view>

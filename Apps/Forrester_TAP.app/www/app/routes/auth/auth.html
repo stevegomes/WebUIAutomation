@@ -1,0 +1,37 @@
+<ion-view view-title="Login">
+    <ion-content class="ft-auth">
+        <div class="ft-tap-logo">
+            <img src="app/img/tap-logo-large.png" class="ft-tap-logo-image"
+                ng-show="!('auth.signup-success' | isState)">
+
+            <img src="app/img/checkmark.png" class="ft-icon-checkmark"
+                ng-show="'auth.signup-success' | isState">
+        </div>
+
+        <ul class="ft-login-nav" ng-show="!('auth.signup-success' | isState)">
+            <li class="ft-login-nav-button" ui-sref-active="ft-active">
+                <a ui-sref="auth.signup">Sign Up</a>
+            </li>
+
+            <li class="ft-login-nav-button" ui-sref-active="ft-active">
+                <a ui-sref="auth.login">Login</a>
+            </li>
+        </ul>
+
+        <ui-view></ui-view>
+
+        <div class="ft-login-toggle-container" ng-show="!('auth.signup-success' | isState)">
+            <button class="button ft-login-toggle-button"
+                ng-show="!authCtrl.useFacebook"
+                ng-click="authCtrl.toggleFacebook()">
+                Use Facebook
+            </button>
+
+            <button class="button ft-login-toggle-button"
+                ng-show="authCtrl.useFacebook"
+                ng-click="authCtrl.toggleFacebook()">
+                Use Email
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

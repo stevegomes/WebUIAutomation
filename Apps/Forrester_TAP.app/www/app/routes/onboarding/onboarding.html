@@ -1,0 +1,133 @@
+<ion-content scroll="false" class="ft-onboarding">
+    <div class="ft-onboarding-container" ng-hide="onboardCtrl.showLocationScreen">
+        <a href class="ft-onboarding-close" ng-click="onboardCtrl.next()"
+            ng-class="{ 'ft-hidden': onboardCtrl.sliderDelegate.isEnd }">
+            Skip
+        </a>
+
+        <a href class="ft-onboarding-button ft-onboarding-button-prev ft-hidden"
+            ng-class="{ 'ft-hidden': onboardCtrl.sliderDelegate.isBeginning }">
+            <img src="app/img/nav-chevron-left.png" class="ft-nav-chevron-left">
+        </a>
+
+        <a href class="ft-onboarding-button ft-onboarding-button-next"
+            ng-class="{ 'ft-hidden': onboardCtrl.sliderDelegate.isEnd }">
+            <img src="app/img/nav-chevron-right.png" class="ft-nav-chevron-right">
+        </a>
+
+        <ion-slides options="onboardCtrl.options" class="ft-onboarding-slides" slider="onboardCtrl.sliderDelegate">
+            <ion-slide-page>
+                <div class="ft-onboarding-slide">
+                    <div class="ft-onboarding-content">
+                        <div class="ft-onboarding-content-upper">
+                            <img src="app/img/tap-logo-large.png" class="ft-tap-logo-large">
+
+                            <strong>Welcome</strong>
+                        </div>
+
+                        Tap lets you express your<br>
+                        feelings about people, places,<br>
+                        and things.
+                    </div>
+                </div>
+            </ion-slide-page>
+
+            <ion-slide-page>
+                <div class="ft-onboarding-slide">
+                    <div class="ft-onboarding-content">
+                        <div class="ft-onboarding-content-upper">
+                            <img src="app/img/icon-onboarding-circles.png" class="ft-icon-onboarding-circles">
+                        </div>
+
+                        Your Taps will be heard by<br>
+                        companies and brands,<br>
+                        enabling them to improve<br>
+                        their experiences. You are<br>
+                        improving the world, one Tap<br>
+                        at a time.
+                    </div>
+                </div>
+            </ion-slide-page>
+
+            <ion-slide-page>
+                <div class="ft-onboarding-slide">
+                    <div class="ft-onboarding-content">
+                        <div class="ft-onboarding-content-upper">
+                            <img src="app/img/icon-join-mob-large.png" class="ft-join-mob-large">
+
+                            <strong>Mobs</strong>
+                        </div>
+
+                        Power in numbers! Amplify<br>
+                        your voice by creating or<br>
+                        joining a Mob &ndash; groups of<br>
+                        people with similar Taps.
+                    </div>
+                </div>
+            </ion-slide-page>
+
+            <ion-slide-page>
+                <div class="ft-onboarding-slide">
+                    <div class="ft-onboarding-content">
+                        <div class="ft-onboarding-content-upper">
+                            <div class="ft-onboarding-categories">
+                                <img src="app/img/icon-onboarding-person.png" class="ft-icon-onboarding-person">
+
+                                or
+
+                                <img src="app/img/icon-onboarding-place.png" class="ft-icon-onboarding-place">
+
+                                or
+
+                                <img src="app/img/icon-onboarding-thing.png" class="ft-icon-onboarding-thing">
+                            </div>
+                        </div>
+
+                        Tap is real-time, so multiple<br>
+                        Taps on the same people,<br>
+                        places, or things will keep the<br>
+                        world up-to-date.  Tap away!
+
+                        <div class="ft-onboarding-content-lower">
+                            <a href class="ft-onboarding-complete-button" ng-click="onboardCtrl.next()">
+                                Got it!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide-page>
+        </ion-slides>
+
+        <div class="ft-onboarding-logo">
+            Powered by <img src="app/img/forrester-logo-white.png" class="ft-logo-image">
+        </div>
+    </div>
+
+    <div class="ft-onboarding-location" ng-show="onboardCtrl.showLocationScreen">
+        <div class="ft-onboarding-slide">
+            <div class="ft-onboarding-content">
+                <div class="ft-onboarding-content-upper">
+                    <img src="app/img/icon-location-services.png" class="ft-icon-location-services">
+                </div>
+
+                Tap is about the world<br>
+                around you, so it&rsquo;s important<br>
+                to enable location...
+
+                <div class="ft-onboarding-content-lower">
+                    <a href class="ft-onboarding-complete-button ft-stacked" ng-click="onboardCtrl.activateLocationServices()">
+                        Enable location
+                    </a>
+
+                    <a href class="ft-onboarding-complete-button ft-stacked ft-negative" ng-click="onboardCtrl.close()">
+                        Maybe later
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ft-onboarding-logo">
+            Powered by <img src="app/img/forrester-logo-white.png" class="ft-logo-image">
+        </div>
+    </div>
+</ion-content>

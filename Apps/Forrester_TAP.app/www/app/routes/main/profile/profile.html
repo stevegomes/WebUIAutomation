@@ -1,0 +1,36 @@
+<ion-view view-title="Profile">
+    <ion-header-bar class="bar-ft">
+        <h1 class="title">Profile</h1>
+    </ion-header-bar>
+
+    <div class="bar bar-subheader bar-ft ft-profile-bar">
+        <div class="ft-profile-picture" ng-click="profileCtrl.choosePhoto()" ng-class="{ 'ft-active': profileCtrl.photoLoaded }">
+            <img ng-src="{{ profileCtrl.user.photoLink }}" on-load="profileCtrl.photoLoaded = true">
+        </div>
+
+        <div class="ft-profile-name">
+            {{ profileCtrl.user.name || profileCtrl.user.username }}
+        </div>
+
+        <div class="ft-profile-location" ng-class="{ 'ft-active': profileCtrl.user.location }">
+            {{ profileCtrl.user.location }}
+        </div>
+
+        <ul class="ft-profile-stats">
+            <li ng-repeat="stat in profileCtrl.user.stats" class="ft-profile-stat ft-{{ stat.name }}">
+                <div class="ft-profile-stat-number" ng-class="{ 'ft-active': stat.number !== null }">
+                    {{ (stat.number || 0) | shortNumber }}
+                </div>
+            </li>
+        </ul>
+
+        <ft-nav-selector class="ft-profile-nav" states="[
+            { name: 'main.profile.my-mobs', label: 'Mobs' },
+            { name: 'main.profile.settings', label: 'Settings' }
+        ]"></ft-nav-selector>
+    </div>
+
+    <ion-content class="has-subheader ft-profile-content">
+        <ui-view></ui-view>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,64 @@
+<ion-view view-title="Mobs">
+    <ion-header-bar class="bar-ft">
+        <h1 class="title">Mobs</h1>
+    </ion-header-bar>
+
+    <div class="bar bar-subheader bar-ft ft-mobs-bar">
+        <ul class="ft-nav-container ft-nav-3-items {{ mobsCtrl.getSelectedCategoryClass() }}">
+            <li ng-repeat="category in mobsCtrl.categories" class="ft-nav-item"
+                ng-class="{ 'ft-active': category === mobsCtrl.selectedCategory }"
+                ng-click="mobsCtrl.selectCategory(category)">
+                <a href>{{ category }}</a>
+            </li>
+        </ul>
+    </div>
+
+    <ion-content class="has-subheader ft-mobs-content" scroll="false">
+        <div class="ft-mobs-search-container">
+            <input type="text" placeholder="Search"
+                autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                class="ft-mobs-search-box"
+                ng-model="mobsCtrl.searchString"
+                ng-model-options="{ debounce: 400 }"
+                ng-change="mobsCtrl.searchMobs(mobsCtrl.selectedCategory, mobsCtrl.searchString)">
+        </div>
+
+        <div class="ft-mobs-list-empty" ng-animate-children="true"
+            ng-class="{ 'ft-active': mobsCtrl.loaded && mobsCtrl.displayItems && !mobsCtrl.displayItems.length }">
+            <span class="ft-mobs-list-empty-text" ng-class="{ 'ft-active': mobsCtrl.lastSearchedString }">
+                Sorry, your search for &ldquo;{{ mobsCtrl.lastSearchedString }}&rdquo; didn&rsquo;t return any results.
+            </span>
+
+            <span class="ft-mobs-list-empty-text" ng-class="{ 'ft-active': !mobsCtrl.lastSearchedString }">
+                There are currently no Mobs.  Check back later.
+            </span>
+        </div>
+
+        <ion-scroll class="ft-mobs-list-container" delegate-handle="list"
+            ng-class="{ 'ft-active': mobsCtrl.loaded && mobsCtrl.displayItems && mobsCtrl.displayItems.length }">
+            <ul class="ft-mobs-list">
+                <li class="ft-mobs-list-item" ng-repeat="item in mobsCtrl.displayItems"
+                    ng-click="mobsCtrl.showMobDetails(item)">
+                    <div class="ft-mobs-list-item-badge ft-{{ item.rating }}"
+                        ng-click="$event.stopPropagation(); mobsCtrl.joinMob(item)">
+                        <div class="ft-mobs-list-item-badge-count">
+                            {{ item.upvoteCount | shortNumber }}
+                        </div>
+
+                        <div class="ft-mobs-list-item-badge-label ft-{{ item.rating }}-border">
+                            {{ item.isMobMember ? 'Mob Member' : 'Join the Mob' }}
+                        </div>
+                    </div>
+
+                    <div class="ft-mobs-list-item-info">
+                        <div class="ft-mobs-list-item-title">{{ item.title }}</div>
+
+                        <div class="ft-mobs-list-item-description" ng-show="item.description">{{ item.description }}</div>
+
+                        <div class="ft-mobs-list-item-distance" ng-show="item.distance">{{ item.distance }}</div>
+                    </div>
+                </li>
+            </ul>
+        </ion-scroll>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+<ul class="list">
+    <li class="item ft-movement-item" ng-repeat="item in $ctrl.mobs"
+        ng-click="$ctrl.openMovement(item)">
+        <div class="ft-movement-rating ft-{{ item.rating }}"></div>
+
+        <div class="ft-movement-content">
+            <div class="ft-movement-title">
+                {{ item.title }}
+            </div>
+
+            <div class="ft-movement-description">
+                {{ item.description }}
+            </div>
+
+            <div class="ft-movement-time" am-time-ago="item.timestamp"></div>
+        </div>
+
+        <div class="ft-movement-arrow">
+            <img src="app/img/icon-caret-right.png" class="ft-icon-caret-right">
+        </div>
+    </li>
+</ul>

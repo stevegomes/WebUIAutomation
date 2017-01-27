@@ -1,0 +1,25 @@
+@import "../../constants.scss";
+
+.ft-enable-notification-modal {
+    background-color: $ft-global-background;
+    text-align: center;
+    color: white;
+
+    @media (max-width: 345px) {
+        .ft-onboarding-complete-button.ft-stacked {
+            width: calc(100% - 100px);
+        }
+    }
+
+    .ft-icon-push-notification {
+        margin-bottom: 40px;
+
+        @media (max-height: 700px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-height: 625px) {
+            margin-bottom: 20px;
+        }
+    }
+}

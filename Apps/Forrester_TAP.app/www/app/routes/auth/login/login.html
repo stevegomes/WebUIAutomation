@@ -1,0 +1,51 @@
+<form name="loginForm" class="list ft-list ft-email-login" novalidate
+    ng-show="!authCtrl.useFacebook"
+    ng-model-options="{ debounce: { default: 500, blur: 0 } }">
+    <div class="ft-item">
+        <div class="item item-input-inset">
+            <input name="username" type="text" class="ft-auth-input"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                placeholder="Username"
+                ng-model="login.username"
+                required>
+        </div>
+
+        <ul class="ft-item-errors" ng-class="{ 'ft-active': loginForm.username.$touched && loginForm.username.$invalid }">
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': loginForm.username.$touched && loginForm.username.$error.required }">
+                Please enter a username
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-item">
+        <div class="item item-input-inset">
+            <input name="password" type="password" class="ft-auth-input"
+                placeholder="Password"
+                ng-model="login.password"
+                required>
+        </div>
+
+        <ul class="ft-item-errors" ng-class="{ 'ft-active': loginForm.password.$touched && loginForm.password.$invalid }">
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': loginForm.password.$touched && loginForm.password.$error.required }">
+                Please enter a password
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-item">
+        <input type="submit" class="button ft-button ft-auth-button" value="Log In"
+            ng-disabled="loginForm.$invalid"
+            ng-click="loginCtrl.emailLogin(login)">
+    </div>
+</form>
+
+<div class="ft-facebook-auth" ng-show="authCtrl.useFacebook">
+    <a href class="button ft-button ft-facebook-button" ng-click="loginCtrl.facebookLogin()">
+        <img src="app/img/facebook-icon.png" class="ft-facebook-icon"> Login with Facebook
+    </a>
+</div>

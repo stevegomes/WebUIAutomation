@@ -1,0 +1,24 @@
+.ft-settings-list {
+    .item {
+        position: relative;
+        color: black;
+        padding: 35px 14px;
+        border-color: rgba(0, 0, 0, .2);
+
+        &.activated {
+            background-color: white; // override, since this gets applied on scroll too instead of just tap (ionic bug?)
+        }
+
+        ft-toggle,
+        .ft-icon-caret-right {
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .forrester-image {
+        width: 100px;
+    }
+}

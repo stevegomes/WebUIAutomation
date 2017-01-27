@@ -1,0 +1,128 @@
+<form name="signupForm" class="list ft-list ft-email-signup" novalidate
+    ng-show="!authCtrl.useFacebook"
+    ng-model-options="{ debounce: { default: 500, blur: 0 } }">
+    <div class="ft-item">
+        <div class="item item-input-inset">
+            <input name="username" type="text" class="ft-auth-input"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                placeholder="Username"
+                ng-model="signup.username"
+                maxlength="25"
+                ui-validate="{
+                    exists: 'signupCtrl.validateExists($value)',
+                    alphanum: 'signupCtrl.validateAlphanum($value)'
+                }"
+                required>
+        </div>
+
+        <ul class="ft-item-errors" ng-class="{ 'ft-active': signupForm.username.$touched && signupForm.username.$invalid }">
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.username.$touched && signupForm.username.$error.required }">
+                Please enter a username
+            </li>
+
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.username.$touched && signupForm.username.$error.alphanum }">
+                Please enter a valid username
+            </li>
+
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.username.$touched && signupForm.username.$error.exists }">
+                Username already exists
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-item">
+        <div class="item item-input-inset">
+            <input name="email" type="email" class="ft-auth-input"
+                placeholder="Email"
+                ng-model="signup.email"
+                required>
+        </div>
+
+        <ul class="ft-item-errors" ng-class="{ 'ft-active': signupForm.email.$touched && signupForm.email.$invalid }">
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.email.$touched && (signupForm.email.$error.required || signupForm.email.$error.email) }">
+                Please enter a valid email address
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-item">
+        <div class="item item-input-inset">
+            <input name="password" type="password" class="ft-auth-input"
+                placeholder="Password"
+                ng-model="signup.password"
+                ui-validate="{
+                    length: 'signupCtrl.validateLength($value)',
+                    number: 'signupCtrl.validateNumber($value)',
+                    capital: 'signupCtrl.validateCapital($value)',
+                    lower: 'signupCtrl.validateLower($value)',
+                    special: 'signupCtrl.validateSpecial($value)',
+                }"
+                required>
+        </div>
+
+        <ul class="ft-item-errors ft-password-errors" ng-class="{ 'ft-active': signupForm.password.$touched && signupForm.password.$invalid }">
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.password.$touched && signupForm.password.$error.length }">
+                From 8 to 25 characters
+            </li>
+
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.password.$touched && signupForm.password.$error.number }">
+                At least one number
+            </li>
+
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.password.$touched && signupForm.password.$error.capital }">
+                At least one capital letter
+            </li>
+
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.password.$touched && signupForm.password.$error.lower }">
+                At least one lowercase letter
+            </li>
+
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.password.$touched && signupForm.password.$error.special }">
+                At least one special character
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-item">
+        <div class="item item-input-inset">
+            <input name="confirmPassword" type="password" class="ft-auth-input"
+                placeholder="Repeat Password"
+                ng-model="signup.confirmPassword"
+                ui-validate="{
+                    match: 'signupCtrl.validateMatch(signup.password, $value)'
+                }"
+                required>
+        </div>
+
+        <ul class="ft-item-errors ft-password-errors" ng-class="{ 'ft-active': signupForm.confirmPassword.$touched && signupForm.confirmPassword.$invalid }">
+            <li class="ft-item-error"
+                ng-class="{ 'ft-active': signupForm.confirmPassword.$touched && signupForm.confirmPassword.$error.match }">
+                Passwords must match
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-item">
+        <input type="submit" class="button ft-button ft-auth-button" value="Sign Up"
+            ng-disabled="signupForm.$invalid"
+            ng-click="signupCtrl.emailSignup(signup, signupForm)">
+    </div>
+</form>
+
+<div class="ft-facebook-auth" ng-show="authCtrl.useFacebook">
+    <a href class="button ft-button ft-facebook-button" ng-click="signupCtrl.facebookSignup()">
+        <img src="app/img/facebook-icon.png" class="ft-facebook-icon"> Sign Up with Facebook
+    </a>
+</div>

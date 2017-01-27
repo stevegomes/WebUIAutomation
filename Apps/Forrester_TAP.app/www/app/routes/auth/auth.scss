@@ -1,0 +1,186 @@
+@import "../../constants.scss";
+
+.ft-auth {
+    background-color: $ft-global-background;
+    color: white;
+    padding: 75px 40px 0;
+}
+
+.platform-ios .ft-auth {
+    padding-top: 95px;
+}
+
+.ft-tap-logo {
+    margin: 0 auto 50px !important;
+    text-align: center;
+    width: 105px;
+    height: 75px;
+    position: relative;
+}
+
+.ft-tap-logo-image,
+.ft-icon-checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ft-tap-logo-image {
+    width: 105px;
+    height: 69px;
+}
+
+.ft-icon-checkmark {
+    width: 75px;
+    height: 75px;
+}
+
+.ft-login-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.ft-login-nav-button {
+    display: inline-block;
+    width: 100px;
+    font-family: "Lato-Bold";
+
+    a {
+        display: inline-block;
+        position: relative;
+        color: rgba(255, 255, 255, 0.35);
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+
+        &:after {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            content: ' ';
+        }
+    }
+
+    &.ft-active a {
+        color: white;
+    }
+}
+
+.ft-list {
+    background-color: transparent;
+    margin: 0;
+}
+
+.ft-item {
+    margin-bottom: 20px;
+
+    & .item-input-inset {
+        padding: 5px 10px;
+        border-radius: 2px;
+        border: none;
+    }
+}
+
+.ft-item-error {
+    position: relative;
+    padding-left: 14px;
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+    transition: max-height .5s ease,
+        opacity .5s ease;
+
+    &:before {
+        content: '\d7'; // times symbol
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &.ft-active {
+        max-height: 30px;
+        opacity: 1;
+    }
+}
+
+.ft-item-errors {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    transition: margin-top .5s ease,
+        margin-bottom .5s ease;
+
+    &.ft-active {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &.ft-password-errors .ft-item-error {
+        padding-left: 0;
+
+        &:before {
+            content: none;
+        }
+    }
+}
+
+.ft-auth-input {
+    width: 100%;
+}
+
+.ft-auth-button {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.ft-facebook-auth {
+    padding: 30px 0 40px;
+}
+
+.ft-facebook-button {
+    display: block;
+}
+
+.ft-login-toggle-container {
+    padding-top: 20px;
+}
+
+.ft-login-toggle-button {
+    display: block;
+    margin: 0 auto 40px;
+    min-width: 40%;
+    font-size: 14px;
+    font-family: "Lato-Regular";
+    text-transform: uppercase;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    min-height: 32px;
+    line-height: 30px;
+    border-radius: 20px;
+
+    &, &:hover {
+        color: white;
+        background-color: transparent;
+        border: 2px solid white;
+    }
+
+    &.active, &.activated {
+        color: $ft-global-background;
+        background-color: white;
+        border: 2px solid white;
+    }
+}
+
+.ft-facebook-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}

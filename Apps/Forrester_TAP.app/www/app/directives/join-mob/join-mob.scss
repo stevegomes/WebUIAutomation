@@ -1,0 +1,22 @@
+ft-join-mob {
+    display: inline-block;
+}
+
+ft-join-mob,
+.ft-join-mob,
+.ft-icon-mob-member,
+.ft-icon-join-mob {
+    width: 65px;
+    height: 41px;
+}
+
+.ft-join-mob {
+    position: relative;
+}
+
+.ft-icon-mob-member,
+.ft-icon-join-mob {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

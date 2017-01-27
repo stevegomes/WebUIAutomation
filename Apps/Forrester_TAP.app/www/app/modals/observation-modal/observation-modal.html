@@ -1,0 +1,55 @@
+<ion-modal-view class="observation-modal" ng-controller="ObservationModalController as modalCtrl">
+    <ion-header-bar class="bar-ft">
+        <h1 class="title"></h1>
+
+        <div class="buttons">
+            <a href class="ft-tap-button-close" ng-click="modalCtrl.closeModal()">
+                <img src="app/img/icon-close.png" class="ft-icon-close">
+            </a>
+        </div>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="observation-modal-content">
+            <div class="card feed-item" ng-class="modalCtrl.item.rating">
+                <div class="item-profile">
+                    <div class="row">
+                        <div class="col col-20 item-profile-picture">
+                            <img class="picture" ng-src="{{ modalCtrl.item.photoLink }}" ng-show="modalCtrl.item.photoLink"/>
+
+                            <img class="picture" ng-src="app/img/fallback-profile-image.png" ng-hide="modalCtrl.item.photoLink"/>
+                        </div>
+
+                        <div class="col col-50 item-profile-name">
+                            <span ng-show="modalCtrl.item.username">{{ modalCtrl.item.username }}</span>
+
+                            <span ng-show="modalCtrl.item.name">{{ modalCtrl.item.name }}</span>
+                        </div>
+
+                        <div class="col item-timestamp" am-time-ago="modalCtrl.item.timestamp"></div>
+                    </div>
+                </div>
+
+                <div class="item-image" ng-show="modalCtrl.item.imageUrl">
+                    <img class="image" ng-src="{{ modalCtrl.item.imageUrl }}" />
+                </div>
+
+                <div class="item-location">
+                    <div class="modal-item-detail">
+                        <div class="item-location-details" ng-class="modalCtrl.item.rating">
+                            <div class="item-location-name">
+                                {{ modalCtrl.item.title }}
+                            </div>
+
+                            <div class="item-location-addr">
+                                {{ modalCtrl.item.address }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-location-comments" ng-show="modalCtrl.item.description">{{ modalCtrl.item.description }}</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

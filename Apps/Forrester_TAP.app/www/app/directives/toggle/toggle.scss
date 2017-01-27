@@ -1,0 +1,71 @@
+ft-toggle {
+    position: relative;
+    display: inline-block;
+
+    .toggle {
+        input + .track {
+            position: relative;
+            height: 33px;
+            width: 58px;
+            background-color: #003b5c;
+            background-image: url("../app/img/base_off.png");
+            background-size: 100%;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            border: none;
+            transition: all .3s ease;
+
+            .handle {
+                left: 2px;
+                top: 2px;
+                width: 29px;
+                height: 29px;
+                border-radius: 29px;
+                opacity: .5;
+                transition: all .3s ease;
+
+                &.ft-toggle-facebook {
+                    background-image: url("../app/img/fb_off.png");
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    background-position: -2px -1px;
+                    background-size: 34px;
+                }
+
+                &.ft-toggle-twitter {
+                    background-image: url("../app/img/tw_off.png");
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    background-position: -2px -1px;
+                    background-size: 34px;
+                }
+            }
+        }
+
+        input:checked + .track {
+            background-color: #003b5c;
+            background-image: url("../app/img/base_on.png");
+
+            .handle {
+                transform: translate3d(24px, 0, 0);
+                opacity: 1;
+
+                &.ft-toggle-facebook {
+                    background-image: url("../app/img/fb_on.png");
+                    background-color: transparent;
+                }
+
+                &.ft-toggle-twitter {
+                    background-image: url("../app/img/tw_on.png");
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    &.social-toggle {
+        .toggle {
+            top: 3px;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+@import "../../constants.scss";
+
+.pane, .view {
+    background: $ft-global-background;
+}
+
+h2 {
+    color: white;
+}
+
+.ft-tabs {
+    .tabs {
+        bottom: 0px;
+        transition: bottom .3s ease;
+        padding-top: 0px;
+        background: $ft-global-background;
+    }
+
+    &.ft-hidden .tabs {
+        bottom: -49px; // tabs are 49px tall
+    }
+}
+
+.tab-item {
+    font-family: "Lato-Regular" !important;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item, ion-tabs.tabs-color-active-positive .tab-item.activated {
+    color: white;
+    background: $ft-inactive-tab-bkg;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active {
+    color: white;
+    background: $ft-global-background;
+}
+
+%tab-icon-styles {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+    background-size: 24px;
+}
+
+.tabs .tab-item .icon.dots-horizontal {
+    @extend %tab-icon-styles;
+    background-image: url(../app/img/dots-horizontal.png);
+}
+
+.tabs .tab-item .icon.target {
+    @extend %tab-icon-styles;
+    background-image: url(../app/img/target.png);
+}
+
+.tabs .tab-item .icon.tiles {
+    @extend %tab-icon-styles;
+    background-image: url(../app/img/tiles.png);
+}
+
+.tabs .tab-item .icon.user-circle-icon {
+    @extend %tab-icon-styles;
+    background-image: url(../app/img/user-circle-icon.png);
+}
+
+.tabs .tab-item .icon.mobs {
+    @extend %tab-icon-styles;
+    background-image: url(../app/img/mobs.png);
+}
+
+.bar-ft {
+    background: $ft-global-background;
+    h1 {
+        font-family: "LeagueSpartan-Bold";
+        font-size: 20px !important;
+        color: white;
+    }
+}
+
+[nav-view-transition=ios][nav-view-direction=forward], [nav-view-transition=ios][nav-view-direction=back] {
+    background: $ft-global-background;
+}

@@ -1,0 +1,143 @@
+@import "../../../constants.scss";
+
+.ft-feed-bar {
+    padding: 9px;
+    height: 55px;
+}
+
+.ft-feed-content {
+    top: 99px;
+}
+
+.feed-no-items {
+    font-family: Lato-Regular;
+    font-size: 16px;
+    color: black;
+    background: white;
+    width: 300px;
+    height: 35px;
+    line-height: 35px;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 17.5px;
+}
+
+.feed-items {
+    padding: 5px;
+}
+
+.card.feed-item {
+    border: 3px solid transparent;
+    border-radius: 5px;
+    &.love, &.hate, &.ok {
+        background: white;
+    }
+    &.love {
+        border-color: $ft-state-love;
+    }
+    &.hate {
+        border-color: $ft-state-hate;
+    }
+    &.ok {
+        border-color: $ft-state-ok;
+    }
+}
+
+.item-profile-picture {
+    width: 70px;
+    text-align: center;
+    max-width: initial;
+    flex: none;
+    padding: 5px 0;
+    .picture {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+}
+
+.item-timestamp {
+    text-align: right;
+    color: #9B9B9B;
+    font-size: 14px;
+    font-family: "Lato-Regular";
+    line-height: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.item-profile-name {
+    color: #4A4A4A;
+    font-family: "Lato-Bold";
+    line-height: 55px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 45%;
+    padding: 5px 0;
+}
+
+.item-image {
+    text-align: center;
+
+    .image {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.item-location {
+    padding: 16px;
+    .item-location-details {
+        min-height: 40px;
+        padding-left: 10px;
+        border-left: 6px solid transparent;
+        &.love, &.hate, &.ok {
+            background: white;
+        }
+        &.love {
+            border-color: $ft-state-love;
+        }
+        &.hate {
+            border-color: $ft-state-hate;
+        }
+        &.ok {
+            border-color: $ft-state-ok;
+        }
+        .item-location-name {
+            font-family: "Lato-Regular";
+            font-size: 20px;
+            color: black;
+        }
+        .item-location-addr {
+            margin-top: 5px;
+            font-family: "Lato-Regular";
+            font-size: 14px;
+            color: black;
+        }
+    }
+    .item-location-comments {
+        padding: 25px 0 0 16px;
+        font-family: "Lato-Regular";
+        font-size: 14px;
+        color: black;
+        white-space: pre-wrap;
+        padding-bottom: 0;
+        margin-bottom: 5px;
+    }
+}
+
+.feed-items .item-location-comments {
+    &::before {
+        content: "“";
+    }
+    &::after {
+        content: "”";
+    }
+}

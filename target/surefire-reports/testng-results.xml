@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="146129" started-at="2017-01-24T10:31:26Z" finished-at="2017-01-24T10:33:52Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="146129" started-at="2017-01-24T10:31:26Z" finished-at="2017-01-24T10:33:52Z">
+      <class name="com.facebook.testCases.LoginTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.facebook.testCases.LoginTest@458ad742]" name="setup" is-config="true" duration-ms="9" started-at="2017-01-24T16:01:26Z" finished-at="2017-01-24T16:01:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="FacebookLogin(java.util.Hashtable)[pri:1, instance:com.facebook.testCases.LoginTest@458ad742]" name="FacebookLogin" duration-ms="70870" started-at="2017-01-24T16:01:26Z" data-provider="getData" finished-at="2017-01-24T16:02:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Username=odpyzdbxxd_1483952209@tfbnw.net, Password=Steve@123#, Runmode=Y, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FacebookLogin -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.facebook.testCases.LoginTest@458ad742]" name="teardown" is-config="true" duration-ms="202" started-at="2017-01-24T16:02:40Z" finished-at="2017-01-24T16:02:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="FacebookLogin(java.util.Hashtable)[pri:1, instance:com.facebook.testCases.LoginTest@458ad742]" name="FacebookLogin" duration-ms="71553" started-at="2017-01-24T16:02:40Z" data-provider="getData" finished-at="2017-01-24T16:03:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Username=vskjvjktoh_1483952214@tfbnw.net, Password=xxxxxxx, Runmode=Y, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FacebookLogin -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.facebook.testCases.LoginTest@458ad742]" name="teardown" is-config="true" duration-ms="166" started-at="2017-01-24T16:03:52Z" finished-at="2017-01-24T16:03:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.facebook.testCases.LoginTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

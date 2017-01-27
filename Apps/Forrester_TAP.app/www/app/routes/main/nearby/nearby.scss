@@ -1,0 +1,148 @@
+@import "../../../constants.scss";
+
+.ft-nearby-bar {
+    padding: 7.5px;
+    height: 55px;
+}
+
+.ft-nearby-filter-button {
+    position: absolute;
+    display: inline-block;
+    left: 12px;
+    width: 32px;
+    height: 32px;
+    top: 5px;
+
+    .ft-icon-filter {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.ft-icon-filter {
+    width: 27px;
+    height: 22px;
+}
+
+.ft-nearby-content {
+    background-color: white;
+    top: 99px;
+}
+
+.ft-no-location {
+    font-family: 'Lato-Regular';
+    font-size: 16px;
+    color: white;
+    width: 300px;
+    height: 35px;
+    line-height: 22px;
+    margin: 75px auto 25px auto;
+    text-align: center;
+    border-radius: 17.5px;
+}
+
+.ft-nearby-loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ft-nearby-view-toggle-button {
+    position: absolute;
+    display: inline-block;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    top: 5px;
+
+    &.ft-hidden {
+        display: none;
+    }
+
+    .ft-icon-map,
+    .ft-icon-list {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.ft-icon-map {
+    width: 32px;
+    height: 29px;
+}
+
+.ft-icon-list {
+    width: 27px;
+    height: 17px;
+}
+
+.ft-nearby-search {
+    position: relative;
+    width: 100%;
+
+    .ft-google-logo {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+input[type="text"].ft-nearby-search-box {
+    appearance: none; // remove iOS inner shadow
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding: 0 135px 0 12px;
+
+    &::placeholder {
+        font-family: "Lato-Italic";
+        font-size: 14px;
+        color: #9B9B9B;
+    }
+
+    & ~ .ft-nearby-search-results {
+        display: none;
+    }
+
+    &:focus ~ .ft-nearby-search-results {
+        display: block;
+    }
+}
+
+.ft-nearby-search-results {
+    position: absolute;
+    top: 39px;
+    width: 100%;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.ft-nearby-search-result {
+    font-size: 13px;
+    line-height: 40px;
+    padding: 0 12px;
+    border-bottom: 1px solid #f5f5f5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+.ft-nearby-content.ft-nearby-content-b {
+    background-color: transparent;
+    color: white;
+
+    .scroll {
+        min-height: 100%; // make sure ion-spinner stays in right spot on ios
+    }
+}

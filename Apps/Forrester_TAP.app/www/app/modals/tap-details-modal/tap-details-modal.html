@@ -1,0 +1,62 @@
+<ion-modal-view class="ft-tap-details-modal" ng-controller="TapDetailsModalController as detailsCtrl">
+    <ion-header-bar class="bar-ft">
+        <button class="button button-icon" ng-click="detailsCtrl.closeModal()">
+            <img src="app/img/icon-caret-left.png" class="ft-icon-caret-left">
+        </button>
+
+        <h1 class="title">Tap Details</h1>
+    </ion-header-bar>
+
+    <ion-content class="ft-tap-details-modal-content" scroll="false">
+        <div class="ft-tap-details-container" ng-show="detailsCtrl.place">
+            <div class="ft-tap-details-place-info">
+                <div class="ft-tap-place-name">
+                    {{ detailsCtrl.place.name || detailsCtrl.place.title }}
+                </div>
+
+                <div class="ft-tap-place-address" ng-if="detailsCtrl.place.formatted_address">
+                    {{ detailsCtrl.place.formatted_address }}
+                </div>
+            </div>
+
+            <div class="ft-tap-details-mobs-container">
+                <div class="ft-tap-details-mobs" ng-show="detailsCtrl.loaded && detailsCtrl.mobs.length">
+                    <div class="ft-form-label">Here&rsquo;s what others are saying...</div>
+
+                    <ion-scroll>
+                        <ul class="ft-form-list">
+                            <li class="ft-form-list-item" ng-repeat="item in detailsCtrl.mobs">
+                                <div class="ft-tap-mob-rating ft-{{ item.rating }}" ng-click="detailsCtrl.viewMobs(item)">
+                                    <div class="ft-tap-mob-rating-label ft-{{ item.rating }}-border"
+                                        ng-show="item.upvoteCount">
+                                        Join the Mob
+                                    </div>
+                                </div>
+
+                                <div class="ft-tap-mob-content">
+                                    <div class="ft-tap-mob-description" ng-show="item.description">{{ item.description }}</div>
+                                    <div class="ft-tap-mob-user" ng-show="item.name || item.username">{{ item.name || item.username }}</div>
+                                    <div class="ft-tap-mob-timestamp" am-time-ago="item.timestamp"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </ion-scroll>
+                </div>
+
+                <div class="ft-form-label ft-tap-details-zero-text" ng-show="detailsCtrl.loaded && !detailsCtrl.mobs.length">
+                    Nobody has said anything about this location yet.  Be the first by Tapping one of the circles below.
+                </div>
+            </div>
+
+            <div class="ft-tap-details-buttons-container">
+                <div class="ft-tap-details-buttons">
+                    <div class="ft-tap-details-button ft-love" ng-click="detailsCtrl.tapScreen('love')"></div>
+
+                    <div class="ft-tap-details-button ft-ok" ng-click="detailsCtrl.tapScreen('ok')"></div>
+
+                    <div class="ft-tap-details-button ft-hate" ng-click="detailsCtrl.tapScreen('hate')"></div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

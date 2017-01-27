@@ -1,0 +1,25 @@
+{
+  "name": "ng-clamp-js",
+  "main": "ngclamp.js",
+  "homepage": "https://github.com/firoze/Clamp.js",
+  "authors": [
+    "Firoze Rakib <frakib@mobiquityinc.com>"
+  ],
+  "description": "Yet another Angular wrapper for Clamp.js",
+  "keywords": [
+    "ng-clamp",
+    "angular",
+    "clamp-js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
+}

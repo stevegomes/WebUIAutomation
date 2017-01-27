@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Forrester Suite]">
+  <test name="Login Test">
+    <classes>
+      <class name="com.facebook.testCases.LoginTest"/>
+    </classes>
+  </test> <!-- Login Test -->
+  <test name="Profile Test">
+    <classes>
+      <class name="com.facebook.testCases.Profiletest"/>
+    </classes>
+  </test> <!-- Profile Test -->
+  <test name="Logout Test">
+    <classes>
+      <class name="com.facebook.testCases.Logouttest"/>
+    </classes>
+  </test> <!-- Logout Test -->
+  <test name="Profile Test(failed)">
+    <classes>
+      <class name="com.facebook.testCases.Profiletest">
+        <methods>
+          <include name="profiletest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.facebook.testCases.Profiletest -->
+      <class name="com.facebook.testCases.LoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.facebook.testCases.LoginTest -->
+      <class name="com.facebook.testCases.Logouttest">
+        <methods>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.facebook.testCases.Logouttest -->
+    </classes>
+  </test> <!-- Profile Test(failed) -->
+</suite> <!-- Failed suite [Forrester Suite] -->

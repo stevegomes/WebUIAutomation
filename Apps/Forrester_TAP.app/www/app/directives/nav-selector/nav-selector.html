@@ -1,0 +1,5 @@
+<ul class="ft-nav-container {{ navCtrl.selectedClass() }}">
+    <li class="ft-nav-item" ui-sref-active="ft-active" ng-repeat="state in navCtrl.states">
+        <a ui-sref="{{ state.name }}">{{ state.label }}</a>
+    </li>
+</ul>

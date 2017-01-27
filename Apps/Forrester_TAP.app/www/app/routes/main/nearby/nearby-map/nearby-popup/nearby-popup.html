@@ -1,0 +1,29 @@
+<div class="ft-popup">
+    <div class="ft-popup-info">
+        <div class="ft-popup-info-name">{{ place.title }}</div>
+
+        <div class="ft-popup-info-address" ng-show="place.address">{{ place.address }}</div>
+
+        <div class="ft-popup-info-phone" ng-show="place.phone">{{ place.phone }}</div>
+
+        <div class="ft-popup-info-closing" ng-show="place.closingTime && place.closingTime !== '24 hours'">
+            Open until {{ place.closingTime }}
+        </div>
+
+        <div class="ft-popup-info-closing" ng-show="place.closingTime && place.closingTime === '24 hours'">
+            Open 24 hours
+        </div>
+
+        <div class="ft-popup-info-description" ng-show="place.description">{{ place.description }}</div>
+    </div>
+
+    <div class="ft-popup-action">
+        <span class="ft-popup-action-item" ng-show="place.isMob" ng-click="mapCtrl.viewMobs(place)">
+            View Mobs
+        </span>
+
+        <span class="ft-popup-action-item" ng-click="nearbyCtrl.viewTaps(place)">
+            View Taps
+        </span>
+    </div>
+</div>

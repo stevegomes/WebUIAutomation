@@ -1,0 +1,204 @@
+@import "constants.scss";
+
+@font-face {
+    font-family: "Lato-Regular";
+    src: url('../app/fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Italic";
+    src: url('../app/fonts/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Bold";
+    src: url('../app/fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Light";
+    src: url('../app/fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: "Lato-Italic";
+    src: url('../app/fonts/Lato-Italic.ttf');
+}
+
+@font-face {
+    font-family: "Lato-LightItalic";
+    src: url('../app/fonts/Lato-LightItalic.ttf');
+}
+
+@font-face {
+    font-family: "LeagueSpartan-Bold";
+    src: url('../app/fonts/LeagueSpartan-Bold.otf');
+}
+
+body {
+    font-family: 'Lato-Regular';
+}
+
+.ng-hide.ng-hide-animate { // https://github.com/angular/angular.js/issues/14015
+    display: none !important;
+}
+
+.ft-button {
+    &, &:hover, &.active, &.activated {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: "Lato-Regular";
+        color: white;
+        background-color: #3B5998;
+        border-color: transparent;
+        border-radius: 25px;
+        opacity: 1;
+        transition: all .5s;
+    }
+
+    &.activated {
+        background: rgba(59, 89, 152, 0.5);
+    }
+
+    &[disabled] {
+        opacity: .4;
+        background-color: rgba(59, 89, 152, 0.75);
+    }
+}
+
+.ft-tap-button-back,
+.ft-tap-button-close {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    width: 32px;
+    height: 32px;
+
+    & [class^='ft-icon-'] {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+}
+
+.ft-tap-button-back {
+    left: 7px;
+}
+
+.ft-tap-button-close {
+    right: 7px;
+}
+
+.content-page {
+    padding: 20px;
+    font-size: 16px;
+    background-color: white;
+    min-height: 100vh;
+    text-align: justify;
+}
+.content-page-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.observation-modal .content-header-bar .buttons.content-buttons {
+    top: -5px;
+}
+
+.ft-logo-image {
+    width: 106px;
+    height: 17px;
+}
+
+.ft-nav-chevron-left,
+.ft-nav-chevron-right {
+    width: 20px;
+    height: 39px;
+}
+
+.ft-tap-logo-large {
+    width: 175px !important; // !important is necessary because ion-slides sets image dimensions to `auto`
+    height: 115px !important;
+}
+
+.ft-love {
+    background: $ft-state-love;
+}
+
+.ft-love-border {
+    border-color: $ft-state-love;
+}
+
+.ft-ok {
+    background: $ft-state-ok;
+}
+
+.ft-ok-border {
+    border-color: $ft-state-ok;
+}
+
+.ft-hate-border {
+    border-color: $ft-state-hate;
+}
+
+.ft-hate {
+    background: $ft-state-hate;
+}
+
+.ft-circle-love,
+.ft-circle-ok,
+.ft-circle-hate {
+    width: 110px !important; // !important for same reason as above
+    height: 110px !important;
+}
+
+.ft-icon-caret-left {
+    width: 10px;
+    height: 19px;
+}
+
+.ft-icon-close {
+    width: 19px;
+    height: 19px;
+}
+
+.ft-icon-onboarding-person {
+    width: 69px !important; // !important for same reason as above
+    height: 67px !important;
+}
+
+.ft-icon-onboarding-place {
+    width: 55px !important; // !important for same reason as above
+    height: 74px !important;
+}
+
+.ft-icon-onboarding-thing {
+    width: 79px !important; // !important for same reason as above
+    height: 66px !important;
+}
+
+.ft-icon-onboarding-circles {
+    width: 251px !important; // !important for same reason as above
+    height: 127px !important;
+}
+
+.ft-icon-location-services {
+    width: 159px;
+    height: 183px;
+}
+
+.ft-icon-push-notification {
+    width: 138px;
+    height: 127px;
+}
+
+.ft-icon-camera {
+    width: 26px;
+    height: 22px;
+}
+
+.ft-google-logo {
+    width: 112px;
+    height: 14px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Forrester Suite">
+
+<!-- <listeners>
+    <listener class-name="listener.TestsListenerAdapter" />
+</listeners> -->
+<test name="Login Test">
+    <classes>
+        <class name="com.facebook.testCases.LoginTest" ></class>  
+    </classes>
+</test>
+<test name="Profile Test">
+    <classes>
+        <class name="com.facebook.testCases.Profiletest" ></class>  
+    </classes>
+</test>
+<test name="Logout Test">
+    <classes>
+        <class name="com.facebook.testCases.Logouttest" ></class>  
+    </classes>
+</test>
+
+</suite>
+	

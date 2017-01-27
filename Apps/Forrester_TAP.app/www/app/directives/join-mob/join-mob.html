@@ -1,0 +1,10 @@
+<div class="ft-join-mob" ng-click=$ctrl.joinMob($ctrl.mob)>
+    <img class="ft-icon-join-mob"
+        ng-click="$ctrl.joinMob($ctrl.mob)"
+        ng-hide="$ctrl.mob.isMobMember"
+        ng-src="app/img/join-mob-icons/icon-join-mob-{{ $ctrl.mob.rating }}.png">
+
+        <img class="ft-icon-mob-member"
+            ng-show="$ctrl.mob.isMobMember"
+            ng-src="app/img/join-mob-icons/icon-mob-member-{{ $ctrl.mob.rating }}.png">
+</div>

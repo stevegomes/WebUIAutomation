@@ -1,0 +1,50 @@
+<ion-view view-title="Feed">
+    <ion-header-bar class="bar-ft">
+        <h1 class="title">Feed</h1>
+    </ion-header-bar>
+
+    <div class="bar bar-subheader bar-ft ft-feed-bar">
+        <ul class="ft-nav-container ft-nav-2-items" ng-class="{
+            'ft-nav-selected-1': feedCtrl.currentFeed == 'mine',
+            'ft-nav-selected-2': feedCtrl.currentFeed == 'friends'
+        }">
+            <li class="ft-nav-item" ng-class=" { 'ft-active': feedCtrl.currentFeed == 'mine' } " ng-click="feedCtrl.fetchFeedsMine()">
+                <a href>Mine</a>
+            </li>
+
+            <li class="ft-nav-item" ng-class=" { 'ft-active': feedCtrl.currentFeed == 'friends' } " ng-click="feedCtrl.fetchFeedsFriends()">
+                <a href>Friends</a>
+            </li>
+        </ul>
+    </div>
+
+    <ion-content class="has-subheader ft-feed-content" ng-hide="feedCtrl.loading">
+        <div class="feed-no-items" ng-hide="feedCtrl.feedItems.length || feedCtrl.loading">Nothing to show.</div>
+        <div class="feed-items" ng-show="feedCtrl.feedItems.length">
+            <div class="card feed-item" ng-repeat="item in feedCtrl.feedItems" ng-class="item.rating" ng-click="feedCtrl.showItem(item)">
+                <div class="item-profile">
+                    <div class="row">
+                        <div class="col col-20 item-profile-picture">
+                            <img class="picture" ng-src="{{ item.photoLink }}" ng-show="item.photoLink"/>
+                            <img class="picture" ng-src="app/img/fallback-profile-image.png" ng-hide="item.photoLink"/>
+                        </div>
+                        <div class="col col-50 item-profile-name">
+                            {{ item.name || item.username }}
+                        </div>
+                        <div class="col item-timestamp" am-time-ago="item.timestamp"></div>
+                    </div>
+                </div>
+                <div class="item-image" ng-show="item.imageUrl">
+                    <img class="image" ng-src="{{ item.imageUrl }}" />
+                </div>
+                <div class="item-location">
+                    <div class="item-location-details" ng-class="item.rating">
+                        <div class="item-location-name">{{ item.title }}</div>
+                        <div class="item-location-addr">{{ item.address }}</div>
+                    </div>
+                    <div class="item-location-comments" ng-show="item.description" ng-clamp="5">{{ item.description }}</div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

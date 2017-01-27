@@ -1,0 +1,31 @@
+<ul class="list ft-settings-list">
+    <li class="item" ng-click="settingsCtrl.disconnectFromFacebook()" ng-show="profileCtrl.hasFacebook">
+        Disconnect from Facebook
+    </li>
+
+    <li class="item" ng-show="profileCtrl.hasFacebook">
+        Share my Taps on Facebook
+
+        <ft-toggle type="facebook" value="settingsCtrl.sharing.facebook" class="social-toggle"></ft-toggle>
+    </li>
+
+    <li class="item" ng-click="settingsCtrl.connectToFacebook()" ng-show="!profileCtrl.hasFacebook">
+        Connect to my Facebook account
+
+        <img src="app/img/icon-caret-right.png" class="ft-icon-caret-right">
+    </li>
+
+    <li class="item" ng-click="settingsCtrl.displayTermsAndConditions()">
+        Terms and Conditions
+
+        <img src="app/img/icon-caret-right.png" class="ft-icon-caret-right">
+    </li>
+
+    <li class="item">
+        <img src="app/img/forrester-logo-black.png" class="forrester-image">
+    </li>
+
+    <li class="item" ng-if="settingsCtrl.showDebugInfo">
+        Version number: {{ settingsCtrl.versionNumber }}
+    </li>
+</ul>

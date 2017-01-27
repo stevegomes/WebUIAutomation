@@ -1,0 +1,64 @@
+@import "../../constants.scss";
+
+.ft-movement-item {
+    height: 86px;
+    border-color: rgba(0, 0, 0, .2);
+
+    &.activated {
+        background-color: white; // override, since this gets applied on scroll too instead of just tap (ionic bug?)
+    }
+}
+
+.ft-movement-rating {
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+}
+
+.ft-movement-content {
+    position: absolute;
+    left: 82px;
+    right: 42px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ft-movement-title,
+.ft-movement-description,
+.ft-movement-time {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ft-movement-title {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.ft-movement-description,
+.ft-movement-time {
+    opacity: .5;
+    font-size: 11px;
+    line-height: 15px;
+    white-space: normal;
+}
+
+.ft-movement-time {
+    font-family: 'Lato-Italic';
+}
+
+.ft-movement-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+}
+
+.ft-icon-caret-right {
+    height: 14px;
+    width: 7px;
+}

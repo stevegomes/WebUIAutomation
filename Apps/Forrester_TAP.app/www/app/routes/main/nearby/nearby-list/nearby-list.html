@@ -1,0 +1,21 @@
+<ion-content class="has-subheader ft-nearby-content ft-nearby-content-b">
+    <ion-spinner class="spinner-light ft-nearby-loading" ng-hide="nearbyCtrl.loaded"></ion-spinner>
+
+    <ul class="ft-nearby-list ft-mobs-list">
+        <li class="ft-mobs-list-item"
+            ng-repeat="item in nearbyCtrl.items | mob:nearbyCtrl.filterMobsOnly | rating:nearbyCtrl.filterRatings"
+            ng-click="nearbyCtrl.viewTaps(item)">
+            <div class="ft-mobs-list-item-badge ft-{{ item.rating }}">
+                <div class="ft-mobs-list-item-badge-count">
+                    {{ item.count | shortNumber }}
+                </div>
+            </div>
+
+            <div class="ft-mobs-list-item-info">
+                <div class="ft-mobs-list-item-title">{{ item.title }}</div>
+
+                <div class="ft-mobs-list-item-distance" ng-show="item.distance">{{ item.distance }}</div>
+            </div>
+        </li>
+    </ul>
+</ion-content>

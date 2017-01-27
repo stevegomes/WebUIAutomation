@@ -1,0 +1,43 @@
+<ion-view view-title="Nearby">
+    <ion-header-bar class="bar-ft">
+        <a href ng-click="nearbyCtrl.openFilter()" class="ft-nearby-filter-button">
+            <img src="app/img/icon-filter.png" class="ft-icon-filter">
+        </a>
+
+        <h1 class="title">Nearby</h1>
+
+        <div class="ft-nearby-view-toggle-button" ui-sref-active="ft-hidden">
+            <a ui-sref="main.nearby.map">
+                <img src="app/img/icon-map.png" class="ft-icon-map">
+            </a>
+        </div>
+
+        <div class="ft-nearby-view-toggle-button" ui-sref-active="ft-hidden">
+            <a ui-sref="main.nearby.list">
+                <img src="app/img/icon-list.png" class="ft-icon-list">
+            </a>
+        </div>
+    </ion-header-bar>
+
+    <div class="bar bar-subheader bar-ft ft-nearby-bar">
+        <div class="ft-nearby-search">
+            <input type="text" placeholder="Search Place"
+                autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                class="ft-nearby-search-box"
+                ng-model="nearbyCtrl.locationSearchString"
+                ng-model-options="{ debounce: 400 }"
+                ng-change="nearbyCtrl.locationSearch(nearbyCtrl.locationSearchString)">
+
+            <img src="app/img/powered_by_google_on_white.png" class="ft-google-logo">
+
+            <ul class="ft-nearby-search-results" ng-show="nearbyCtrl.locationResults.length">
+                <li class="ft-nearby-search-result" ng-repeat="item in nearbyCtrl.locationResults"
+                    ng-click="nearbyCtrl.selectLocation(item.place_id)">
+                    {{ item.description }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <ui-view></ui-view>
+</ion-view>

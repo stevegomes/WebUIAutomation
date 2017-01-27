@@ -1,0 +1,108 @@
+@import "../../../../constants.scss";
+
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+    &.leaflet-clickable {
+        transition: opacity .3s ease;
+        opacity: 0;
+        pointer-events: none;
+
+        &.ft-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &:not(.leaflet-clickable) {
+        pointer-events: none;
+    }
+}
+
+.platform-android .ft-map-container {
+    top: 0;
+}
+
+.platform-ios .ft-map-container {
+    top: 11px;
+}
+
+.ft-map-container {
+    position: relative;
+
+    .leaflet-control-zoom, .leaflet-control-attribution, .leaflet-popup-close-button {
+        display: none;
+    }
+
+    .leaflet-control-custom-location {
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        padding-top: 5px;
+        text-align: center;
+        color: #666666;
+        border-color: white;
+        border-radius: 50%;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+        transition: background-color 0.25s, border-color 0.25s;
+        &:active {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+@keyframes pulsing-animation {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.ft-map-icon img {
+    width: 30px;
+    height: 31px;
+}
+
+.ft-map-icon-mob img {
+    animation: pulsing-animation .5s ease-in-out infinite;
+}
+
+#ft-nearby-map {
+    &.ft-mobs-only .ft-map-icon:not(.ft-map-icon-mob) {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &.ft-love-hidden .ft-map-icon-love,
+    &.ft-ok-hidden .ft-map-icon-ok,
+    &.ft-hate-hidden .ft-map-icon-hate {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.ft-recenter-map {
+    position: absolute;
+    bottom: 13px;
+    left: 18px;
+    background: rgba(0, 0, 0, .53);
+    font-family: "Lato-Bold";
+    font-size: 16px;
+    color: white;
+    line-height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease;
+
+    &.ft-active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

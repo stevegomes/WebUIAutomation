@@ -1,0 +1,522 @@
+{
+  "airport": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "amusement_park": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "aquarium": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "bakery": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "bar": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "cafe": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "car_rental": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "clothing_store": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "default": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "department_store": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "florist": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "food": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "grocery_or_supermarket": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "gym": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "hair_care": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "home_goods_store": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "jewelry_store": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "movie_theater": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "night_club": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "restaurant": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "shopping_mall": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "spa": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "stadium": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "store": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "train_station": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  },
+  "zoo": {
+    "love": [
+      "The atmosphere was amazing!",
+      "I'll definitely go back",
+      "They're that much better than the others!",
+      "Highly recommended"
+    ],
+    "ok": [
+      "Found it fitting",
+      "Could have been better",
+      "I go for the consistency",
+      "I could take it or leave it"
+    ],
+    "hate": [
+      "Would not go back",
+      "You would not believe",
+      "Stay away from that place!",
+      "Terrible, just terrible"
+    ]
+  }
+}

@@ -1,0 +1,357 @@
+.ft-onboarding {
+    height: auto; // counteracts the margin-top/margin-bottom of -1px that ionic puts in
+
+    strong {
+        display: inline-block;
+        font-family: 'Lato-Bold';
+        font-weight: normal;
+        font-size: 24px;
+        margin-bottom: 18px;
+
+        @media (max-width: 375px) {
+            font-size: 23px;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 345px) {
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+    }
+}
+
+.ft-onboarding-container,
+.ft-onboarding-location {
+    position: relative;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.ft-onboarding-location {
+    .ft-icon-location-services {
+        margin-bottom: 40px;
+
+        @media (max-height: 700px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-height: 625px) {
+            width: 119.25px;
+            height: 137.25px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.ft-onboarding-slides {
+    .swiper-pagination {
+        bottom: 63px;
+    }
+
+    .swiper-pagination-bullet {
+        height: 16px;
+        width: 16px;
+        border: 1px solid white;
+        background: transparent;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: white;
+    }
+}
+
+.ft-onboarding-button {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    padding: 6px;
+    opacity: 1;
+    transition: opacity .3s ease;
+    text-decoration: none;
+
+    &.ft-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.ft-onboarding-button-prev {
+    left: 16px;
+
+    @media (max-width: 375px) {
+        left: 10px
+    }
+
+    @media (max-width: 345px) {
+        left: 4px;
+    }
+}
+
+.ft-onboarding-button-next {
+    right: 16px;
+
+    @media (max-width: 375px) {
+        right: 10px
+    }
+
+    @media (max-width: 345px) {
+        right: 4px;
+    }
+}
+
+.ft-onboarding-slide {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.ft-onboarding-close {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Lato-Light';
+    padding: 6px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity .3s ease;
+
+    &.ft-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 22px;
+    }
+
+    @media (max-width: 345px) {
+        font-size: 20px;
+    }
+}
+
+.platform-ios .ft-onboarding-close {
+    top: 29px;
+}
+
+.ft-onboarding-content {
+    display: inline-block;
+    position: absolute;
+    font-size: 22px;
+    line-height: 31px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    @media (max-width: 375px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    @media (max-width: 345px) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .ft-tap-logo-large {
+        display: block;
+        margin: 30px auto 38px;
+
+        @media (max-height: 700px) {
+            width: 157.5px !important;
+            height: 103.5px !important;
+            margin: 25px auto 32px;
+        }
+
+        @media (max-height: 625px) {
+            width: 140px !important;
+            height: 92px !important;
+            margin: 20px auto 26px;
+        }
+    }
+}
+
+
+.ft-onboarding-content-upper,
+.ft-onboarding-content-lower {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.ft-onboarding-content-upper {
+    bottom: 100%;
+}
+
+.ft-onboarding-content-lower {
+    top: 100%;
+}
+
+.ft-onboarding-content .ft-icon-onboarding-circles {
+    margin-bottom: 41px;
+
+    @media (max-height: 700px) {
+        margin-bottom: 31px;
+    }
+
+    @media (max-height: 625px) {
+        margin-bottom: 21px;
+    }
+}
+
+.ft-join-mob-large {
+    width: 172px !important; // !important is necessary because ion-slides sets image dimensions to `auto`
+    height: 108px !important;
+}
+
+.ft-onboarding-content .ft-join-mob-large {
+    display: block;
+    margin: 0 auto 36px;
+
+    @media (max-height: 700px) {
+        width: 154.8px !important;
+        height: 97.2px !important;
+        margin: 0 auto 33px;
+    }
+
+    @media (max-height: 625px) {
+        width: 137.6px !important;
+        height: 86.4px !important;
+        margin: 0 auto 30px;
+    }
+}
+
+.ft-onboarding-categories {
+    font-family: 'Lato-Light';
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 49px;
+
+    .ft-icon-onboarding-person {
+        vertical-align: middle;
+        margin-right: 0;
+    }
+
+    .ft-icon-onboarding-place {
+        vertical-align: middle;
+        margin-left: 7px;
+        margin-right: 9px;
+    }
+
+    .ft-icon-onboarding-thing {
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+
+    @media (max-height: 700px) {
+        font-size: 22px;
+        margin-bottom: 39px;
+
+        .ft-icon-onboarding-person {
+            width: #{69px * .9} !important;
+            height: #{67px * .9} !important;
+        }
+
+        .ft-icon-onboarding-place {
+            width: #{55px * .9} !important;
+            height: #{74px * .9} !important;
+        }
+
+        .ft-icon-onboarding-thing {
+            width: #{79px * .9} !important;
+            height: #{66px * .9} !important;
+        }
+    }
+
+    @media (max-height: 625px) {
+        font-size: 20px;
+        margin-bottom: 29px;
+
+        .ft-icon-onboarding-person {
+            width: #{69px * .8} !important;
+            height: #{67px * .8} !important;
+        }
+
+        .ft-icon-onboarding-place {
+            width: #{55px * .8} !important;
+            height: #{74px * .8} !important;
+        }
+
+        .ft-icon-onboarding-thing {
+            width: #{79px * .8} !important;
+            height: #{66px * .8} !important;
+        }
+    }
+}
+
+.ft-onboarding-complete-button {
+    display: inline-block;
+    font-family: 'Lato-Bold';
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    background: #4daad7;
+    border-radius: 50px;
+    width: 150px;
+    line-height: 50px;
+    margin-top: 58px;
+
+    &.ft-stacked {
+        display: block;
+        width: calc(100% - 120px);
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-height: 700px) {
+            margin-top: 44px;
+        }
+
+        @media (max-height: 625px) {
+            margin-top: 30px;
+        }
+    }
+
+    &.ft-stacked + &.ft-stacked {
+        margin-top: 29px;
+
+        @media (max-height: 700px) {
+            margin-top: 24px;
+        }
+
+        @media (max-height: 625px) {
+            margin-top: 19px;
+        }
+    }
+
+    &.ft-negative {
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+    }
+}
+
+.ft-onboarding-logo {
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Lato-Light';
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    width: 100%;
+
+    .ft-logo-image {
+        vertical-align: baseline;
+        margin-bottom: -1px;
+        margin-left: 1px;
+    }
+}

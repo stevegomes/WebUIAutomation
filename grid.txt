@@ -1,0 +1,14 @@
+Hub->
+java -Dwebdriver.chrome.driver=/Users/stevangomes/Documents/StevanOffice/Jar_Files/chromedriver -jar selenium-server-standalone-2.53.0.jar -role hub -hubConfig hub.json
+
+Node 1->
+java -Dwebdriver.chrome.driver=/Users/stevangomes/Documents/StevanOffice/Jar_Files/chromedriver -jar selenium-server-standalone-2.53.0.jar -role rc -nodeConfig node1.json
+
+Node 2->
+java -Dwebdriver.chrome.driver=/Users/stevangomes/Documents/StevanOffice/Jar_Files/chromedriver -jar selenium-server-standalone-2.53.0.jar -role rc -nodeConfig node2.json
+
+
+
+
+
+

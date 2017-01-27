@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="runtheapp"  >
+<target name="runtheapp">
+  <ant antfile="build.xml"/>
+  <exec failonerror="true" dir="/Users/stevangomes/Documents/javapractice-workspace/WebUIAutomation" executable="/Users/stevangomes/Documents/javapractice-workspace/WebUIAutomation/testrunner.sh">
+    <arg line=""/>
+  </exec>
+</target>
+</project>

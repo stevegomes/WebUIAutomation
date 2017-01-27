@@ -1,0 +1,31 @@
+<!--
+    Each tab's child <ion-nav-view> directive will have its own
+    navigation history that also transitions its views in and out.
+-->
+
+<ion-tabs class="tabs-icon-top tabs-color-active-positive ft-tabs" ng-class="{ 'ft-hidden': !mainCtrl.TabsService.tabsActive }">
+    <!-- tap -->
+    <ion-tab title="Tap" icon-off="dots-horizontal" icon-on="dots-horizontal" ui-sref="main.tap">
+        <ion-nav-view name="main-tap"></ion-nav-view>
+    </ion-tab>
+
+    <!-- nearby -->
+    <ion-tab title="Nearby" icon-off="target" icon-on="target" ui-sref="main.nearby">
+        <ion-nav-view name="main-nearby"></ion-nav-view>
+    </ion-tab>
+
+    <!-- mobs -->
+    <ion-tab title="Mobs" icon-off="mobs" icon-on="mobs" ui-sref="main.mobs">
+        <ion-nav-view name="main-mobs"></ion-nav-view>
+    </ion-tab>
+
+    <!-- feed -->
+    <ion-tab title="Feed" icon-off="tiles" icon-on="tiles" ui-sref="main.feed">
+        <ion-nav-view name="main-feed"></ion-nav-view>
+    </ion-tab>
+
+    <!-- profile -->
+    <ion-tab title="Profile" icon-off="user-circle-icon" icon-on="user-circle-icon" ui-sref="main.profile">
+        <ion-nav-view name="main-profile"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

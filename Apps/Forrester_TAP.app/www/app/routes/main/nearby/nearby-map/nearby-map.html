@@ -1,0 +1,20 @@
+<ion-content scroll="false" class="has-subheader ft-nearby-content ft-nearby-content-b">
+    <div class="ft-map-container" ng-if="mapCtrl.hasLocation" data-tap-disabled="true">
+        <div id="ft-nearby-map" set-map-height ontouchstart="this.focus()"
+            ng-class="{
+                'ft-mobs-only': nearbyCtrl.filterMobsOnly,
+                'ft-love-hidden': nearbyCtrl.filterRatings && !nearbyCtrl.filterRatings.love,
+                'ft-ok-hidden': nearbyCtrl.filterRatings && !nearbyCtrl.filterRatings.ok,
+                'ft-hate-hidden': nearbyCtrl.filterRatings && !nearbyCtrl.filterRatings.hate
+            }"></div>
+
+        <div class="ft-recenter-map" ng-class="{ 'ft-active': mapCtrl.canRecenter }" ng-click="mapCtrl.centerMap()">
+            Re-center Map
+        </div>
+    </div>
+
+    <div class="ft-no-location" ng-show="!mapCtrl.hasLocation">
+        The Tap app allows you to share your experiences throughout your day. Please enable Location Services for Tap in
+        your phone's settings to view the Map and Mobs.
+    </div>
+</div>

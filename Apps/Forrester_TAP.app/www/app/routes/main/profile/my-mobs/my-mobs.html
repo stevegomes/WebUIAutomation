@@ -1,0 +1,24 @@
+<ion-spinner class="ft-my-mobs-loading" ng-show="!mobsCtrl.loaded"></ion-spinner>
+
+<ul class="list" ng-show="mobsCtrl.loaded">
+    <li class="item ft-movement-item" ng-repeat="item in mobsCtrl.items"
+        ng-click="mobsCtrl.showMobDetails(item)">
+        <div class="ft-movement-rating ft-{{ item.rating }}"></div>
+
+        <div class="ft-movement-content">
+            <div class="ft-movement-title">
+                {{ item.title }}
+            </div>
+
+            <div class="ft-movement-description">
+                {{ item.description }}
+            </div>
+
+            <div class="ft-movement-time" am-time-ago="item.timestamp"></div>
+        </div>
+
+        <div class="ft-movement-arrow">
+            <img src="app/img/icon-caret-right.png" class="ft-icon-caret-right">
+        </div>
+    </li>
+</ul>

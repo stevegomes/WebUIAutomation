@@ -1,0 +1,135 @@
+.ft-profile-bar {
+    height: 280px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.ft-profile-content {
+    top: 324px;
+    background-color: white;
+
+    .scroll {
+        min-height: 100%; // make sure ion-spinner stays in right spot on ios
+    }
+}
+
+.platform-ios .ft-profile-content {
+    top: 344px !important;
+}
+
+.ft-profile-picture {
+    width: 87px;
+    height: 87px;
+    margin: 0 auto;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-bottom: 7px;
+    background: rgba(0, 0, 0, .3);
+    transform: translate3d(0, 0, 0); // overflow: hidden ignored during transition without this
+
+    img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        zoom: 2;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+
+    &.ft-active img {
+        opacity: 1;
+    }
+}
+
+.ft-profile-name {
+    font-family: 'Lato-Bold';
+    font-size: 20px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.ft-profile-location {
+    size: 14px;
+    color: white;
+    opacity: 0;
+    transition: opacity .3s ease;
+
+    &.ft-active {
+        opacity: .5;
+    }
+}
+
+.ft-profile-stats {
+    position: absolute;
+    bottom: 57px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.ft-profile-stat {
+    display: inline-block;
+    position: relative;
+    width: 59px;
+    height: 59px;
+    margin-right: 38px;
+    border-radius: 30px;
+
+    @media (max-width: 375px) {
+        width: 55px;
+        height: 55px;
+        margin-right: 31px;
+    }
+
+    @media (max-width: 345px) {
+        width: 49px;
+        height: 49px;
+        margin-right: 24px;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.ft-profile-stat-number {
+    display: inline-block;
+    position: absolute;
+    top: 53%; // slightly off-center, since League Spartan Bold has odd vertical spacing
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'LeagueSpartan-Bold';
+    font-size: 15px;
+    color: white;
+    opacity: 0;
+    transition: opacity .3s ease;
+
+    @media (max-width: 375px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 345px) {
+        font-size: 13px;
+    }
+
+    &.ft-active {
+        opacity: 1;
+    }
+}
+
+.ft-profile-nav {
+    position: absolute;
+    bottom: 11px;
+    left: 0;
+    width: 100%;
+}
+
+.platform-android {
+    .action-sheet-has-icons .icon {
+        left: 28px;
+        transform: translateX(-50%);
+    }
+}
