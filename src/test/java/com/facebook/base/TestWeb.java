@@ -21,7 +21,7 @@ public class TestWeb {
 		driver.findElement(By.xpath("//*[@id='pass']")).sendKeys("Strongsteve@123#");
 		driver.findElement(By.xpath("//*[@id='loginbutton']")).click();
 		Thread.sleep(15000);*/
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='container']/div/header/div[2]/div/ul/li[4]/a")));
 		WebElement el = driver.findElement(By.xpath("//*[@id='container']/div/header/div[2]/div/ul/li[4]/a"));
 		Actions builder = new Actions(driver);
